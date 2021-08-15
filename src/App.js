@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const shades = new Values(value).all(5);
+      const shades = new Values(value).all(10);
       setColors(shades);
       console.log(shades);
 
@@ -23,13 +23,18 @@ function App() {
     }
   };
 
+  const handleInput = (e) => {
+    if (e.value > 15) return;
+    setValue(e.target.value.trim());
+  };
+
   return (
     <div className="App">
       <div className="inner-container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}  >
           <div className={error ? "form-container errorTrue" : "form-container"}>
             <div className={error ? "form-inner errorBorder" : "form-inner"}>
-              <input type="text" value={value} onChange={(e) => setValue(e.target.value.trim())} placeholder={error ? "Enter correct color" : `Red or #ff0505`} />
+              <input type="text" maxLength={20} value={value} onChange={handleInput} placeholder={error ? "Enter correct color" : `Red or #ff0505`} />
 
               <button type="submit">Enter</button>
             </div>
@@ -40,7 +45,7 @@ function App() {
         <div className="Shades">
           {colors.map((arr, index) => {
             console.log(arr);
-            return <Shades key={index} {...arr}></Shades>;
+            return <Shades key={index} {...arr} hex={arr.hex} index={index}></Shades>;
           })}
         </div>
       </div>

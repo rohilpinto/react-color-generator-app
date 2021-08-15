@@ -29,6 +29,10 @@
   color: white;
 }
 
+::selection {
+  background: black;
+}
+
 ::placeholder {
   color: rgb(172, 172, 172);
   font-weight: 300;

@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const shades = new Values(value).all(10);
+      const shades = new Values(value).all(5);
       setColors(shades);
       console.log(shades);
 
@@ -39,6 +39,7 @@ function App() {
 
         <div className="Shades">
           {colors.map((arr, index) => {
+            console.log(arr);
             return <Shades key={index} {...arr}></Shades>;
           })}
         </div>

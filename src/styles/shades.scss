@@ -1,6 +1,6 @@
 .Shades {
   width: 100%;
-  border: 1px solid #000;
+  // border: 1px solid #000;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
@@ -14,4 +14,5 @@
   height: 180px;
   margin: 15px;
   border-radius: 10px;
+  padding: 20px;
 }

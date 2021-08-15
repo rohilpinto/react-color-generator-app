@@ -9,6 +9,7 @@ const Shades = ({ rgb, weight, hex, index }) => {
     let timeout = setTimeout(() => {
       setCopy(false);
       console.log("df");
+      return clearTimeout(timeout);
     }, 3000);
 
     // return () => {

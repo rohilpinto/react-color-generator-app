@@ -1,0 +1,17 @@
+@use './styles/shades.scss';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  border: 1px solid #000;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+}
+
+.inner-container {
+  width: 100%;
+}

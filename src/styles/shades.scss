@@ -1,0 +1,17 @@
+.Shades {
+  width: 100%;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+  grid-gap: 0px;
+  grid-auto-flow: auto;
+  justify-items: center;
+}
+
+.shade {
+  width: 350px;
+  height: 180px;
+  margin: 15px;
+  border-radius: 10px;
+}

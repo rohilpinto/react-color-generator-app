@@ -6,7 +6,7 @@ import Values from "values.js";
 function App() {
   const [value, setValue] = useState("");
   const [error, setError] = useState(false);
-  const [colors, setColors] = useState([]);
+  const [colors, setColors] = useState(new Values("#9c42f5").all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <div className="inner-container">
-        <form onSubmit={handleSubmit}  >
+        <form onSubmit={handleSubmit}>
           <div className={error ? "form-container errorTrue" : "form-container"}>
             <div className={error ? "form-inner errorBorder" : "form-inner"}>
               <input type="text" maxLength={20} value={value} onChange={handleInput} placeholder={error ? "Enter correct color" : `Red or #ff0505`} />

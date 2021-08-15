@@ -18,6 +18,7 @@ function App() {
 
       setError(false);
     } catch (error) {
+      setValue("");
       setError(true);
       console.log(error);
     }

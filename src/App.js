@@ -5,7 +5,7 @@ import Shades from "./components/Shades";
 import Values from "values.js";
 function App() {
   const [value, setValue] = useState("");
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [colors, setColors] = useState([]);
 
   const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ function App() {
       setColors(shades);
       console.log(shades);
     } catch (error) {
-      setError(true);
+      // setError(true);
       console.log(error);
     }
   };

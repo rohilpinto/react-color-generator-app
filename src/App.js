@@ -5,7 +5,7 @@ import Shades from "./components/Shades";
 import Values from "values.js";
 function App() {
   const [value, setValue] = useState("");
-  // const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
   const [colors, setColors] = useState([]);
 
   const handleSubmit = (e) => {
@@ -15,8 +15,10 @@ function App() {
       const shades = new Values(value).all(10);
       setColors(shades);
       console.log(shades);
+
+      setError(false);
     } catch (error) {
-      // setError(true);
+      setError(true);
       console.log(error);
     }
   };
@@ -25,12 +27,14 @@ function App() {
     <div className="App">
       <div className="inner-container">
         <form onSubmit={handleSubmit}>
-          <div className="form-container">
-            <div className="form-inner">
-              <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="#ffffff" />
+          <div className={error ? "form-container errorTrue" : "form-container"}>
+            <div className={error ? "form-inner errorBorder" : "form-inner"}>
+              <input type="text" value={value} onChange={(e) => setValue(e.target.value.trim())} placeholder={error ? "Enter correct color" : `Red or #ff0505`} />
+
               <button type="submit">Enter</button>
             </div>
           </div>
+          {/* <div> {}</div> */}
         </form>
 
         <div className="Shades">

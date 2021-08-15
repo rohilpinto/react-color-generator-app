@@ -1,0 +1,32 @@
+.form-container {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-inner {
+  max-width: 500px;
+  width: 100%;
+  height: fit-content;
+  // border: 1px solid #000;
+  background: linear-gradient(270deg, #52c1ff 0%, #6bff83 100%);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.form-inner input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  padding: 20px;
+}
+
+.form-inner button {
+  width: 100px;
+  margin: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+}

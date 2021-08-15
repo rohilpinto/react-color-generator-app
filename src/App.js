@@ -25,8 +25,12 @@ function App() {
     <div className="App">
       <div className="inner-container">
         <form onSubmit={handleSubmit}>
-          <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="#ffffff" />
-          <button type="submit">Enter</button>
+          <div className="form-container">
+            <div className="form-inner">
+              <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="#ffffff" />
+              <button type="submit">Enter</button>
+            </div>
+          </div>
         </form>
 
         <div className="Shades">
